@@ -1,12 +1,13 @@
 void main() {
-  List checkList = [1, 2, 4, 5, 6, 7, 8];
-  print(binarySearch(myList: checkList, item: 7));
+  List checkList = [1, 2, 4, 5, 6, 7, 8, 10, 9];
+  print(binarySearch(myList: checkList, item: 10));
 }
 
 dynamic binarySearch({
   required List myList,
   required int item,
 }) {
+  myList.sort();
   int low = 0;
   int high = myList.length - 1;
   while (low <= high) {
